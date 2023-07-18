@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700); */
 
 body {
     margin: 0;
@@ -508,9 +508,9 @@ ul.ul-edu li .description p.institution {
 /* footer-end */
 
 
-
-/* media-quries */
-
+/* 
+/? media-quries */
+ 
 @media screen and (max-width:1042px) {
     .home-second {
         width: 90%;
@@ -576,4 +576,4 @@ ul.ul-edu li .description p.institution {
     .research-img img {
         max-height: 160px;
     }
-}
+} 
