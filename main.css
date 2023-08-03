@@ -1,5 +1,4 @@
 /* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700); */
-
 body {
     margin: 0;
     font-family: 'Lexend Deca', sans-serif;
@@ -75,7 +74,6 @@ input[type=number] {
     height: 20px
 }
 
-
 .link {
     display: flex;
     flex-direction: row;
@@ -91,7 +89,6 @@ input[type=number] {
     display: flex;
     gap: 4px;
 }
-
 
 .topnav a {
     float: left;
@@ -141,10 +138,9 @@ input[type=number] {
     align-items: center;
 }
 
-
 /* bodd-start */
 .img img {
-    height: 435px;
+   height: 367px;
 }
 
 .anchor {
@@ -246,8 +242,6 @@ ul.ul-edu li .description p.institution {
 }
 
 /* body-end */
-
-
 /* publication */
 .publications {
     padding-top: 90px;
@@ -269,7 +263,6 @@ ul.ul-edu li .description p.institution {
     gap: 41px;
 }
 
-
 .publication-heading {
     width: 46%;
 }
@@ -279,8 +272,6 @@ ul.ul-edu li .description p.institution {
     color: #a0a0a0;
 }
 
-
-
 .sub-post-pub {
     display: flex;
     flex-direction: column;
@@ -288,7 +279,6 @@ ul.ul-edu li .description p.institution {
 }
 
 /* publication */
-
 /* research-interest */
 .research-interest {
     padding-top: 95px;
@@ -306,21 +296,12 @@ ul.ul-edu li .description p.institution {
     height: 280px;
 }
 
-
 .interest-content {
     width: 50%;
     text-align: justify;
 }
 
 /* research-interest */
-
-
-
-
-
-
-
-
 /* footer-start */
 .footer-distributed {
     background: #666;
@@ -340,12 +321,9 @@ ul.ul-edu li .description p.institution {
 }
 
 /* Footer left */
-
 .footer-distributed .footer-left {
     width: 40%;
 }
-
-
 
 .footer-distributed h3 {
     color: #ffffff;
@@ -358,7 +336,6 @@ ul.ul-edu li .description p.institution {
 }
 
 /* Footer links */
-
 .footer-distributed .footer-links {
     color: #ffffff;
     margin: 20px 0 12px;
@@ -381,7 +358,6 @@ ul.ul-edu li .description p.institution {
 }
 
 /* Footer Center */
-
 .footer-distributed .footer-center {
     width: 35%;
 }
@@ -440,7 +416,6 @@ ul.ul-edu li .description p.institution {
 }
 
 /* Footer Right */
-
 .footer-distributed .footer-right {
     width: 20%;
 }
@@ -472,19 +447,15 @@ ul.ul-edu li .description p.institution {
     cursor: pointer;
     background-color: #33383b;
     border-radius: 2px;
-
     font-size: 20px;
     color: #ffffff;
     text-align: center;
     line-height: 35px;
-
     margin-right: 3px;
     margin-bottom: 5px;
 }
 
-
 @media (max-width: 880px) {
-
     .footer-distributed {
         font: bold 14px sans-serif;
     }
@@ -501,16 +472,10 @@ ul.ul-edu li .description p.institution {
     .footer-distributed .footer-center i {
         margin-left: 0;
     }
-
 }
 
-
 /* footer-end */
-
-
-/* 
-/? media-quries */
- 
+/* /? media-quries */
 @media screen and (max-width:1042px) {
     .home-second {
         width: 90%;
@@ -538,7 +503,6 @@ ul.ul-edu li .description p.institution {
 
     .publication-heading {
         width: 100%;
-
     }
 
     .publication-all {
@@ -563,17 +527,14 @@ ul.ul-edu li .description p.institution {
     }
 }
 
-
 @media screen and (max-width:430px) {
-
     .publication-all {
         flex-wrap: wrap;
     }
-
 }
 
 @media screen and (max-width:800px) {
     .research-img img {
         max-height: 160px;
     }
-} 
+}
