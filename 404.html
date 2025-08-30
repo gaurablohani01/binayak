@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Binayak Lohani</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to Binayak Lohani's homepage.">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/modern-style.css">
+    <link rel="stylesheet" href="css/404-modern.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="bi bi-sun-fill sun-icon"></i>
+        <i class="bi bi-moon-fill moon-icon"></i>
+    </button>
+    
+    <!-- 404 Container -->
+    <div class="error-container">
+        <div class="error-content">
+            <!-- Animated 404 Number -->
+            <div class="error-number">
+                <span class="digit digit-4">4</span>
+                <span class="digit digit-0">
+                    <div class="orbit">
+                        <div class="planet"></div>
+                    </div>
+                    0
+                </span>
+                <span class="digit digit-4-2">4</span>
+            </div>
+            
+            <!-- Floating Elements -->
+            <div class="floating-elements">
+                <div class="floating-element" style="--delay: 0s; --x: 10%; --y: 20%;">
+                    <i class="bi bi-file-earmark-x"></i>
+                </div>
+                <div class="floating-element" style="--delay: 0.5s; --x: 85%; --y: 30%;">
+                    <i class="bi bi-question-circle"></i>
+                </div>
+                <div class="floating-element" style="--delay: 1s; --x: 15%; --y: 70%;">
+                    <i class="bi bi-search"></i>
+                </div>
+                <div class="floating-element" style="--delay: 1.5s; --x: 80%; --y: 75%;">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <div class="floating-element" style="--delay: 2s; --x: 50%; --y: 15%;">
+                    <i class="bi bi-gear"></i>
+                </div>
+                <div class="floating-element" style="--delay: 2.5s; --x: 5%; --y: 50%;">
+                    <i class="bi bi-lightbulb"></i>
+                </div>
+            </div>
+            
+            <!-- Error Message -->
+            <div class="error-message fade-in">
+                <h1 class="error-title">Oops! Lost in the Digital Void</h1>
+                <p class="error-description">
+                    The page you're searching for seems to have escaped into another dimension. 
+                    Even our most advanced fluid dynamics models couldn't predict this one!
+                </p>
+            </div>
+            
+            <!-- Suggested Actions -->
+            <div class="error-actions fade-in">
+                <div class="action-buttons">
+                    <a href="index.html" class="action-btn primary">
+                        <i class="bi bi-house-door"></i>
+                        <span>Return Home</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                    <a href="research.html" class="action-btn secondary">
+                        <i class="bi bi-microscope"></i>
+                        <span>Explore Research</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                    <a href="publication.html" class="action-btn secondary">
+                        <i class="bi bi-journal-text"></i>
+                        <span>View Publications</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                </div>
+                
+                <!-- Search Suggestions -->
+                <div class="search-section">
+                    <div class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="text" placeholder="Search for research topics, publications..." id="searchInput">
+                        <button class="search-btn" id="searchBtn">
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="quick-suggestions">
+                        <span class="suggestion-label">Popular searches:</span>
+                        <div class="suggestion-tags">
+                            <a href="research.html#fluid-mechanics" class="suggestion-tag">Fluid Mechanics</a>
+                            <a href="research.html#turbulence" class="suggestion-tag">Turbulence</a>
+                            <a href="research.html#cfd" class="suggestion-tag">CFD</a>
+                            <a href="publication.html" class="suggestion-tag">Publications</a>
+                            <a href="cv/binayak_CV-1.pdf" class="suggestion-tag" target="_blank">CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interactive Science Fact -->
+            <div class="science-fact fade-in">
+                <div class="fact-container">
+                    <div class="fact-icon">
+                        <i class="bi bi-lightbulb-fill"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Did You Know?</h3>
+                        <p id="scienceFact">
+                            In turbulent flow, even tiny changes can create dramatically different outcomes - 
+                            much like how a small typo in a URL can lead you to this page!
+                        </p>
+                        <button class="fact-refresh" id="refreshFact">
+                            <i class="bi bi-arrow-clockwise"></i>
+                            Another Fact
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Help Card -->
+        <div class="help-card fade-in">
+            <div class="help-header">
+                <div class="help-avatar">
+                    <img src="img/profile.jpeg" alt="Binayak Lohani" class="avatar-img">
+                    <div class="online-indicator"></div>
+                </div>
+                <div class="help-info">
+                    <h3>Need Help?</h3>
+                    <p>I'm here to assist with your research journey</p>
+                </div>
+            </div>
+            <div class="help-actions">
+                <a href="mailto:bil56@pitt.edu" class="help-btn primary">
+                    <i class="bi bi-envelope"></i>
+                    Send Email
+                </a>
+                <a href="https://www.linkedin.com/in/binayak-lohani-b1101816b/" class="help-btn secondary" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modern Footer -->
+    <footer class="modern-footer minimal">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Binayak Lohani. All rights reserved.</p>
+                    <p>Developed by <a href="https://lohanigaurab.com.np" target="_blank" class="developer-credit">Gaurab Lohani</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="modern-script.js"></script>
+    <script>
+        // Science facts for rotation
+        const scienceFacts = [
+            "In turbulent flow, even tiny changes can create dramatically different outcomes - much like how a small typo in a URL can lead you to this page!",
+            "Computational Fluid Dynamics can simulate millions of particles, but it still can't predict where you meant to click!",
+            "The Reynolds number determines flow patterns in fluids - unfortunately, it doesn't work for web navigation!",
+            "Large Eddy Simulation captures the big picture of turbulence, unlike this missing webpage!",
+            "Atmospheric boundary layers are complex - but finding the right page shouldn't be!",
+            "Fluid mechanics follows physical laws, but the internet follows Murphy's law!"
+        ];
+        
+        let currentFactIndex = 0;
+        
+        // Rotate science facts
+        document.getElementById('refreshFact').addEventListener('click', function() {
+            currentFactIndex = (currentFactIndex + 1) % scienceFacts.length;
+            const factElement = document.getElementById('scienceFact');
+            factElement.style.opacity = '0';
+            
+            setTimeout(() => {
+                factElement.textContent = scienceFacts[currentFactIndex];
+                factElement.style.opacity = '1';
+            }, 300);
+            
+            // Add rotation animation to button
+            this.style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                this.style.transform = 'rotate(0deg)';
+            }, 500);
+        });
+        
+        // Search functionality
+        document.getElementById('searchBtn').addEventListener('click', function() {
+            const searchTerm = document.getElementById('searchInput').value.trim();
+            if (searchTerm) {
+                // Simple search logic - redirect to research page with hash
+                const searchLower = searchTerm.toLowerCase();
+                if (searchLower.includes('fluid') || searchLower.includes('mechanic')) {
+                    window.location.href = 'research.html#fluid-mechanics';
+                } else if (searchLower.includes('turbulence')) {
+                    window.location.href = 'research.html#turbulence';
+                } else if (searchLower.includes('cfd') || searchLower.includes('computational')) {
+                    window.location.href = 'research.html#cfd';
+                } else if (searchLower.includes('publication') || searchLower.includes('paper')) {
+                    window.location.href = 'publication.html';
+                } else if (searchLower.includes('cv') || searchLower.includes('resume')) {
+                    window.location.href = 'cv/binayak_CV-1.pdf';
+                } else {
+                    window.location.href = 'research.html';
+                }
+            }
+        });
+        
+        // Enter key for search
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('searchBtn').click();
+            }
+        });
+        
+        // Add some interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate digits on load
+            const digits = document.querySelectorAll('.digit');
+            digits.forEach((digit, index) => {
+                setTimeout(() => {
+                    digit.style.animation = 'digitBounce 0.8s ease-out';
+                }, index * 200);
+            });
+            
+            // Add mouse movement parallax effect
+            document.addEventListener('mousemove', function(e) {
+                const floatingElements = document.querySelectorAll('.floating-element');
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                
+                floatingElements.forEach((element, index) => {
+                    const speed = (index + 1) * 0.5;
+                    const x = (mouseX - 0.5) * speed;
+                    const y = (mouseY - 0.5) * speed;
+                    element.style.transform = `translate(${x}px, ${y}px) rotate(${x * 10}deg)`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
