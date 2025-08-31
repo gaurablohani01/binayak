@@ -322,6 +322,38 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.style.setProperty('--transition-slow', '0ms');
 }
 
+// Read More Functionality
+function toggleReadMore() {
+    const fullText = document.querySelector('.description-full');
+    const button = document.querySelector('.read-more-btn');
+    const buttonText = document.querySelector('.read-more-text');
+    const buttonIcon = document.querySelector('.read-more-icon');
+    
+    if (fullText.style.display === 'none' || fullText.style.display === '') {
+        fullText.style.display = 'block';
+        buttonText.textContent = 'Read Less';
+        button.classList.add('expanded');
+        
+        // Smooth animation
+        fullText.style.opacity = '0';
+        fullText.style.transform = 'translateY(-10px)';
+        
+        setTimeout(() => {
+            fullText.style.opacity = '1';
+            fullText.style.transform = 'translateY(0)';
+        }, 10);
+    } else {
+        fullText.style.opacity = '0';
+        fullText.style.transform = 'translateY(-10px)';
+        
+        setTimeout(() => {
+            fullText.style.display = 'none';
+            buttonText.textContent = 'Read More';
+            button.classList.remove('expanded');
+        }, 300);
+    }
+}
+
 // Console greeting
 console.log(`
 🚀 Welcome to Binayak Lohani's Modern Portfolio!

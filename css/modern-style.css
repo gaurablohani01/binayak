@@ -411,13 +411,26 @@ body {
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "text image"
+        "social image";
     gap: var(--space-16);
     align-items: center;
     width: 100%;
 }
 
 .hero-text {
+    grid-area: text;
     max-width: 600px;
+}
+
+.hero-image {
+    grid-area: image;
+}
+
+.hero-content .social-links {
+    grid-area: social;
+    margin-top: var(--space-6);
 }
 
 .hero-image {
@@ -508,6 +521,50 @@ body {
     color: var(--text-tertiary);
     margin-bottom: var(--space-8);
     line-height: 1.6;
+}
+
+.description-preview {
+    margin-bottom: var(--space-4);
+}
+
+.description-full {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.description-full p {
+    margin-bottom: var(--space-4);
+}
+
+.read-more-btn {
+    background: var(--primary-500);
+    color: white;
+    border: none;
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-lg);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: all 0.3s ease;
+    margin-top: var(--space-4);
+}
+
+.read-more-btn:hover {
+    background: var(--primary-600);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+}
+
+.read-more-icon {
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn.expanded .read-more-icon {
+    transform: rotate(180deg);
 }
 
 /* Social Links */
@@ -726,9 +783,24 @@ body {
     }
     
     .hero-content {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: var(--space-8);
         text-align: center;
+    }
+    
+    .hero-image {
+        order: 1;
+    }
+    
+    .social-links {
+        order: 2;
+        justify-content: center;
+        margin-top: var(--space-4);
+    }
+    
+    .hero-text {
+        order: 3;
     }
     
     .hero-title {
@@ -741,6 +813,11 @@ body {
     
     .hero-description {
         font-size: 1rem;
+    }
+    
+    .read-more-btn {
+        font-size: 0.8rem;
+        padding: var(--space-2) var(--space-4);
     }
     
     .hero-image img {
