@@ -1,0 +1,208 @@
+/* Research Page Styles */
+.main-research {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.research-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.research-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.research-section.reverse {
+    grid-template-columns: 2fr 1fr;
+}
+
+.research-section .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.research-section .image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+.research-section .image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.research-content h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.research-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+    border-radius: 2px;
+}
+
+.research-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.research-content .keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.keyword-tag {
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.keyword-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 128, 128, 0.3);
+}
+
+/* Responsive Design for Research Page */
+@media screen and (max-width: 768px) {
+    .main-research {
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .research-section,
+    .research-section.reverse {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .research-section .image {
+        order: -1;
+    }
+    
+    .research-section .image img {
+        max-width: 250px;
+    }
+    
+    .research-content h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .research-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .research-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .keywords {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-research {
+        padding: 0.5rem;
+    }
+    
+    .research-section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .research-section .image img {
+        max-width: 200px;
+    }
+    
+    .research-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .research-content p {
+        font-size: 0.95rem;
+    }
+    
+    .keyword-tag {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+/* Loading Animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.research-section:nth-child(odd) .research-content {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.research-section:nth-child(even) .research-content {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.research-section .image {
+    animation: fadeInUp 0.8s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
